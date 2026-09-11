@@ -1,0 +1,130 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smart-shelf-analytics"
+version = "0.1.0"
+description = "Automated retail shelf auditing with computer vision and multimodal LLMs."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+keywords = ["retail", "computer-vision", "planogram", "llm", "analytics", "fastapi"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: FastAPI",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.5",
+    "python-multipart>=0.0.9",
+    "httpx>=0.27",
+    "aiosqlite>=0.20",
+    "structlog>=24.1",
+    "tenacity>=9.0",
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "pillow>=10.2",
+    # YOLO detection. Ships by default so `SHELF_DETECTOR_BACKEND=yolo` works
+    # with no extra install step; weights are fetched on first use.
+    "ultralytics>=8.3",
+]
+
+[project.optional-dependencies]
+# Real multimodal backends. Without these the deterministic mock engine is used.
+llm = [
+    "instructor>=1.5",
+    "anthropic>=0.40",
+    "openai>=1.50",
+]
+# Langfuse tracing.
+obs = [
+    "langfuse>=2.50",
+]
+# Vector store for shelf-image similarity search (docker-compose service).
+vector = [
+    "qdrant-client>=1.12",
+]
+# Streamlit front end (smart_shelf.ui). Streamlit already brings pandas,
+# numpy, pillow and altair, so nothing further is needed for the charts.
+ui = [
+    "streamlit>=1.39",
+]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "pytest-cov>=5.0",
+    "ruff>=0.7",
+    "mypy>=1.13",
+    "pre-commit>=4.0",
+    "types-requests>=2.32",
+]
+
+[project.scripts]
+smart-shelf = "smart_shelf.__main__:main"
+smart-shelf-ui = "smart_shelf.ui.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/smart-shelf-analytics"
+Documentation = "https://github.com/your-org/smart-shelf-analytics#readme"
+Issues = "https://github.com/your-org/smart-shelf-analytics/issues"
+
+[tool.uv]
+# ultralytics requires `opencv-python`, the GUI build, which links libGL and
+# libxcb and fails to import on a slim container with
+# `ImportError: libxcb.so.1: cannot open shared object file`.
+# Both variants install the same `cv2` module, so having both is also a
+# non-deterministic race over which one wins. A never-satisfiable marker drops
+# it from the graph and leaves `opencv-python-headless` as the sole provider.
+override-dependencies = ["opencv-python ; sys_platform == 'unsupported'"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smart_shelf"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--import-mode=importlib",
+]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "unit: fast, isolated tests with no I/O",
+    "integration: multi-component tests against the in-memory store",
+    "api: HTTP-level tests through the ASGI transport",
+    "ui: Streamlit front-end tests driven by AppTest (needs the 'ui' extra)",
+    "slow: excluded from the default developer loop",
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:websockets.*",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src/smart_shelf"]
+omit = ["*/__main__.py", "*/ui/app.py"]
+
+[tool.coverage.report]
+skip_covered = true
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "\\.\\.\\.",
+]

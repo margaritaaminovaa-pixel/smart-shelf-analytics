@@ -1,0 +1,60 @@
+# Ruff configuration: linting and formatting for smart-shelf-analytics.
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+extend-exclude = [".venv", "data", "build", "dist"]
+
+[lint]
+select = [
+    "E", "W",    # pycodestyle
+    "F",         # pyflakes
+    "I",         # isort
+    "N",         # pep8-naming
+    "UP",        # pyupgrade
+    "B",         # flake8-bugbear
+    "A",         # flake8-builtins
+    "C4",        # flake8-comprehensions
+    "DTZ",       # flake8-datetimez: naive datetimes are a bug in an audit trail
+    "T20",       # flake8-print
+    "SIM",       # flake8-simplify
+    "TID",       # flake8-tidy-imports
+    "PTH",       # flake8-use-pathlib
+    "RUF",       # ruff-specific
+    "ASYNC",     # flake8-async
+    "S",         # flake8-bandit
+    "ANN",       # flake8-annotations
+    "D",         # pydocstyle
+]
+ignore = [
+    "D100",   # module docstring is enforced by review, not by the linter
+    "D104",   # package docstrings live in __init__ and are short
+    "D105",   # dunder methods are documented on the class
+    "D107",   # __init__ documented on the class
+    "D203",   # incompatible with D211
+    "D213",   # incompatible with D212
+    "ANN401", # deliberate Any at vendor-SDK boundaries
+    "S101",   # assert is used for narrowing in exception handlers
+    "B008",   # FastAPI Depends()/File()/Form() in defaults is the framework idiom
+]
+
+[lint.per-file-ignores]
+"tests/**" = ["D", "ANN", "S", "PLR2004"]
+"scripts/**" = ["T20", "D"]
+"src/smart_shelf/__main__.py" = ["D"]
+# Root launcher: imports must follow the sys.path and runtime guards.
+"app.py" = ["E402"]
+
+[lint.isort]
+known-first-party = ["smart_shelf"]
+force-sort-within-sections = true
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
