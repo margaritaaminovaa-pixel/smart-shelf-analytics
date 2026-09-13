@@ -1,0 +1,170 @@
+{
+  "store_id": "STORE-0042",
+  "shelf_id": "AISLE-07-BAY-3",
+  "category": "ambient grocery",
+  "products": [
+    {
+      "sku": "SKU-1001",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1002",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1003",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "beverages",
+      "facings": 0,
+      "shelf_level": 0,
+      "position_index": 2,
+      "stock_state": "out_of_stock",
+      "price_label_visible": false,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2001",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2002",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2003",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3001",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 0,
+      "shelf_level": 2,
+      "position_index": 0,
+      "stock_state": "out_of_stock",
+      "price_label_visible": false,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3002",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 0,
+      "shelf_level": 2,
+      "position_index": 1,
+      "stock_state": "out_of_stock",
+      "price_label_visible": false,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3003",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "snacks",
+      "facings": 1,
+      "shelf_level": 2,
+      "position_index": 2,
+      "stock_state": "low_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    }
+  ],
+  "discrepancies": [
+    {
+      "discrepancy_type": "out_of_stock",
+      "severity": "critical",
+      "sku": "SKU-1003",
+      "product_name": "Verdant Iced Tea Peach 500ml",
+      "shelf_level": 0,
+      "expected": "2 facings",
+      "observed": "0 facings",
+      "description": "Verdant Iced Tea Peach 500ml (SKU-1003) shows 0 of 2 expected facings on shelf level 0.",
+      "recommended_action": "Restock 2 facings of SKU-1003.",
+      "confidence": 0.9
+    },
+    {
+      "discrepancy_type": "out_of_stock",
+      "severity": "critical",
+      "sku": "SKU-3001",
+      "product_name": "Sea Salt Crisps 150g",
+      "shelf_level": 2,
+      "expected": "2 facings",
+      "observed": "0 facings",
+      "description": "Sea Salt Crisps 150g (SKU-3001) shows 0 of 2 expected facings on shelf level 2.",
+      "recommended_action": "Restock 2 facings of SKU-3001.",
+      "confidence": 0.9
+    },
+    {
+      "discrepancy_type": "out_of_stock",
+      "severity": "critical",
+      "sku": "SKU-3002",
+      "product_name": "Paprika Crisps 150g",
+      "shelf_level": 2,
+      "expected": "2 facings",
+      "observed": "0 facings",
+      "description": "Paprika Crisps 150g (SKU-3002) shows 0 of 2 expected facings on shelf level 2.",
+      "recommended_action": "Restock 2 facings of SKU-3002.",
+      "confidence": 0.9
+    },
+    {
+      "discrepancy_type": "low_stock",
+      "severity": "medium",
+      "sku": "SKU-3003",
+      "product_name": "Rye Crackers 200g",
+      "shelf_level": 2,
+      "expected": "2 facings",
+      "observed": "1 facing",
+      "description": "Rye Crackers 200g (SKU-3003) shows 1 of 2 expected facings on shelf level 2.",
+      "recommended_action": "Restock 1 facing of SKU-3003.",
+      "confidence": 0.9
+    }
+  ],
+  "compliance_score": 0.6111,
+  "shelf_occupancy": 0.3789,
+  "empty_slot_count": 7,
+  "summary": "Bottom row almost empty and the top row thinning out. 4 planogram deviations detected across 3 shelf rows.",
+  "captured_at": "2026-09-22T08:30:00Z"
+}

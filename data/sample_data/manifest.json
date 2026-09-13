@@ -1,0 +1,45 @@
+{
+  "seed": 20260922,
+  "scenarios": [
+    {
+      "name": "shelf_compliant",
+      "description": "Fully stocked shelf matching the planogram exactly.",
+      "store_id": "STORE-0042",
+      "shelf_id": "AISLE-07-BAY-3",
+      "image": "images/shelf_compliant.jpg",
+      "planogram": "planograms/shelf_compliant.json",
+      "expected_audit": "fixtures/shelf_compliant_audit.json",
+      "empty_slots": 0
+    },
+    {
+      "name": "shelf_minor_gaps",
+      "description": "Two facings pulled from the middle row - low severity.",
+      "store_id": "STORE-0042",
+      "shelf_id": "AISLE-07-BAY-3",
+      "image": "images/shelf_minor_gaps.jpg",
+      "planogram": "planograms/shelf_minor_gaps.json",
+      "expected_audit": "fixtures/shelf_minor_gaps_audit.json",
+      "empty_slots": 2
+    },
+    {
+      "name": "shelf_critical_stockout",
+      "description": "Bottom row almost empty and the top row thinning out.",
+      "store_id": "STORE-0042",
+      "shelf_id": "AISLE-07-BAY-3",
+      "image": "images/shelf_critical_stockout.jpg",
+      "planogram": "planograms/shelf_critical_stockout.json",
+      "expected_audit": "fixtures/shelf_critical_stockout_audit.json",
+      "empty_slots": 7
+    },
+    {
+      "name": "shelf_dense_6row",
+      "description": "High-resolution chiller bay: six rows of twelve tightly packed facings against a dark backdrop, with four gaps.",
+      "store_id": "STORE-0042",
+      "shelf_id": "AISLE-02-CHILLER-1",
+      "image": "images/shelf_dense_6row.jpg",
+      "planogram": "planograms/shelf_dense_6row.json",
+      "expected_audit": "fixtures/shelf_dense_6row_audit.json",
+      "empty_slots": 4
+    }
+  ]
+}

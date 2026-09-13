@@ -1,0 +1,134 @@
+{
+  "store_id": "STORE-0042",
+  "shelf_id": "AISLE-07-BAY-3",
+  "category": "ambient grocery",
+  "products": [
+    {
+      "sku": "SKU-1001",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1002",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1003",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2001",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2002",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 0,
+      "shelf_level": 1,
+      "position_index": 1,
+      "stock_state": "out_of_stock",
+      "price_label_visible": false,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2003",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3001",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3002",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3003",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    }
+  ],
+  "discrepancies": [
+    {
+      "discrepancy_type": "out_of_stock",
+      "severity": "critical",
+      "sku": "SKU-2002",
+      "product_name": "Oat Rings Classic 350g",
+      "shelf_level": 1,
+      "expected": "2 facings",
+      "observed": "0 facings",
+      "description": "Oat Rings Classic 350g (SKU-2002) shows 0 of 2 expected facings on shelf level 1.",
+      "recommended_action": "Restock 2 facings of SKU-2002.",
+      "confidence": 0.9
+    }
+  ],
+  "compliance_score": 0.8889,
+  "shelf_occupancy": 0.5511,
+  "empty_slot_count": 2,
+  "summary": "Two facings pulled from the middle row - low severity. 1 planogram deviations detected across 3 shelf rows.",
+  "captured_at": "2026-09-22T08:30:00Z"
+}

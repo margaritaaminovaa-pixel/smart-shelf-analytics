@@ -1,0 +1,121 @@
+{
+  "store_id": "STORE-0042",
+  "shelf_id": "AISLE-07-BAY-3",
+  "category": "ambient grocery",
+  "products": [
+    {
+      "sku": "SKU-1001",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1002",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-1003",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "beverages",
+      "facings": 2,
+      "shelf_level": 0,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2001",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2002",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-2003",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "cereals",
+      "facings": 2,
+      "shelf_level": 1,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3001",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 0,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3002",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 1,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    },
+    {
+      "sku": "SKU-3003",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "snacks",
+      "facings": 2,
+      "shelf_level": 2,
+      "position_index": 2,
+      "stock_state": "in_stock",
+      "price_label_visible": true,
+      "confidence": 0.86
+    }
+  ],
+  "discrepancies": [],
+  "compliance_score": 1.0,
+  "shelf_occupancy": 0.62,
+  "empty_slot_count": 0,
+  "summary": "Fully stocked shelf matching the planogram exactly. 0 planogram deviations detected across 3 shelf rows.",
+  "captured_at": "2026-09-22T08:30:00Z"
+}

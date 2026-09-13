@@ -1,0 +1,97 @@
+{
+  "store_id": "STORE-0042",
+  "shelf_id": "AISLE-07-BAY-3",
+  "category": "ambient grocery",
+  "entries": [
+    {
+      "sku": "SKU-1001",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1002",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1003",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2001",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2002",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2003",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3001",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3002",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3003",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "store_id": "STORE-0042",
+  "shelf_id": "AISLE-02-CHILLER-1",
+  "category": "ambient grocery",
+  "entries": [
+    {
+      "sku": "SKU-1001-L0",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1002-L0",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1003-L0",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2001-L0",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2002-L0",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2003-L0",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "beverages",
+      "shelf_level": 0,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2001-L1",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2002-L1",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2003-L1",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3001-L1",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3002-L1",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3003-L1",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "cereals",
+      "shelf_level": 1,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3001-L2",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3002-L2",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3003-L2",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1001-L2",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1002-L2",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1003-L2",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "snacks",
+      "shelf_level": 2,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1001-L3",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1002-L3",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1003-L3",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2001-L3",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2002-L3",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2003-L3",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "confectionery",
+      "shelf_level": 3,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2001-L4",
+      "name": "Granola Crunch Honey 400g",
+      "brand": "MorningField",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2002-L4",
+      "name": "Oat Rings Classic 350g",
+      "brand": "MorningField",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-2003-L4",
+      "name": "Choco Pillows 375g",
+      "brand": "CocoaLab",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3001-L4",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3002-L4",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3003-L4",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "household",
+      "shelf_level": 4,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3001-L5",
+      "name": "Sea Salt Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 0,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3002-L5",
+      "name": "Paprika Crisps 150g",
+      "brand": "Tidebreak",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 1,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-3003-L5",
+      "name": "Rye Crackers 200g",
+      "brand": "Fjordbake",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 2,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1001-L5",
+      "name": "Aurora Sparkling Water 500ml",
+      "brand": "Aurora",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 3,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1002-L5",
+      "name": "Nordfjell Cola 330ml",
+      "brand": "Nordfjell",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 4,
+      "expected_facings": 2,
+      "min_facings": 1
+    },
+    {
+      "sku": "SKU-1003-L5",
+      "name": "Verdant Iced Tea Peach 500ml",
+      "brand": "Verdant",
+      "category": "chilled",
+      "shelf_level": 5,
+      "position_index": 5,
+      "expected_facings": 2,
+      "min_facings": 1
+    }
+  ]
+}
