@@ -1,0 +1,99 @@
+# Local, self-contained stack: API + vector store + analytics dashboard.
+# Start with:  docker compose up --build
+name: smart-shelf-analytics
+
+services:
+  api:
+    build:
+      context: .
+      target: runtime
+    image: smart-shelf-analytics:local
+    container_name: shelf-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      SHELF_ENVIRONMENT: local
+      SHELF_LOG_JSON: "true"
+      SHELF_DATABASE_URL: sqlite+aiosqlite:///./data/store/audits.db
+      SHELF_DETECTOR_BACKEND: heuristic
+      SHELF_VLM_BACKEND: mock
+      SHELF_NOTIFICATIONS_DRY_RUN: "true"
+      SHELF_QDRANT_URL: http://qdrant:6333
+      # Switch to a real multimodal backend by setting these and rebuilding
+      # with the 'llm' extra:
+      # SHELF_VLM_BACKEND: anthropic
+      # SHELF_ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Mounted below data/ so the sample shelves baked into the image survive.
+      - audit-data:/app/data/store
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    container_name: shelf-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    environment:
+      QDRANT__SERVICE__HTTP_PORT: 6333
+      QDRANT__LOG_LEVEL: WARN
+    volumes:
+      - qdrant-data:/qdrant/storage
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c ':> /dev/tcp/127.0.0.1/6333' || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  ui:
+    build:
+      context: .
+      target: runtime
+      args:
+        # Layers Streamlit on top; the API image stays lean.
+        UV_EXTRAS: "--extra ui"
+    image: smart-shelf-analytics:ui
+    container_name: shelf-ui
+    restart: unless-stopped
+    profiles: ["ui"]
+    entrypoint: ["python", "-m", "smart_shelf.ui"]
+    command:
+      - "--server.port=8501"
+      - "--server.address=0.0.0.0"
+      - "--server.headless=true"
+      - "--browser.gatherUsageStats=false"
+    ports:
+      - "8501:8501"
+    environment:
+      SHELF_ENVIRONMENT: local
+      SHELF_DATABASE_URL: sqlite+aiosqlite:///./data/store/audits.db
+      # PROJECT_ROOT resolves inside site-packages once installed, so point the
+      # sample-data lookup at the copy baked into the image.
+      SHELF_SAMPLE_DATA_DIR: /app/data/sample_data
+      SHELF_NOTIFICATIONS_DRY_RUN: "true"
+    volumes:
+      - audit-data:/app/data/store
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  audit-data:
+  qdrant-data:
